@@ -1,0 +1,6 @@
+web:
+    build: ~
+    image: sroze/php-example
+    labels:
+        com.continuouspipe.public: true
+

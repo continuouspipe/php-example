@@ -1,0 +1,13 @@
+web:
+    build: .
+    links:
+        - mysql
+    expose:
+        - 80
+mysql:
+    image: mysql
+    environment:
+        MYSQL_ROOT_PASSWORD: root
+    expose:
+        - 3306
+
