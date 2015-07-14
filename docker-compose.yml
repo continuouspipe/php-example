@@ -4,6 +4,8 @@ web:
         - mysql
     expose:
         - 80
+    labels:
+        com.continuouspipe.public: true
 mysql:
     image: mysql
     environment:
