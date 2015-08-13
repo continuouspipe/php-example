@@ -6,6 +6,7 @@ web:
         - 80
     labels:
         com.continuouspipe.public: true
+        com.continuouspipe.image-name: sroze/php-example
 mysql:
     image: mysql
     environment:
