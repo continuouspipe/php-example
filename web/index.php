@@ -20,7 +20,7 @@ $app->register(new DoctrineServiceProvider(), array(
 ));
 
 $app->get('/', function () {
-    return new Response('PHP application is working successfully !');
+    return new Response('PHP application is working successfully with CP !');
 });
 
 $app->mount('/status', new StatusController());
