@@ -5,7 +5,7 @@ web:
     expose:
         - 80
     labels:
-        com.continuouspipe.public: true
+        com.continuouspipe.visibility: public
         com.continuouspipe.image-name: sroze/php-example-manual
 mysql:
     image: mysql
@@ -14,4 +14,4 @@ mysql:
     expose:
         - 3306
     labels:
-        com.continuouspipe.locked: true
+        com.continuouspipe.update: lock
