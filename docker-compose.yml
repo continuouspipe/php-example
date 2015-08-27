@@ -13,4 +13,5 @@ mysql:
         MYSQL_ROOT_PASSWORD: root
     expose:
         - 3306
-
+    labels:
+        com.continuouspipe.locked: true
