@@ -5,12 +5,13 @@ web:
     expose:
         - 80
     labels:
-        com.continuouspipe.public: true
-        com.continuouspipe.image-name: sroze/demo-cp
+        com.continuouspipe.visibility: public
+        com.continuouspipe.image-name: sroze/php-example-manual
 mysql:
     image: mysql
     environment:
         MYSQL_ROOT_PASSWORD: root
     expose:
         - 3306
-
+    labels:
+        com.continuouspipe.update: lock
