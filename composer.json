@@ -6,5 +6,12 @@
     },
     "autoload": {
         "psr-0": { "": "src/" }
+    },
+    "extra": {
+        "dock-cli": {
+            "extra-hostname": {
+                "web": ["docker-php-example.sroze.io"]
+            }
+        }
     }
 }
