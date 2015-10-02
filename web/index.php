@@ -20,7 +20,7 @@ $app->register(new DoctrineServiceProvider(), array(
 ));
 
 $app->get('/', function () {
-    return new Response('<p>PHP application is accessible!</p><p><a href="/status">Go to status page to check the database.</a></p>');
+    return new Response('<p>PHP application is accessible for James!</p><p><a href="/status">Go to status page to check the database.</a></p>');
 });
 
 $app->mount('/status', new StatusController());
