@@ -4,6 +4,8 @@ web:
         - mysql
     expose:
         - 80
+    volumes:
+        - .:/app
     labels:
         com.continuouspipe.visibility: public
         com.continuouspipe.image-name: sroze/php-example-manual
