@@ -4,9 +4,11 @@ web:
         - mysql
     expose:
         - 80
+    volumes:
+        - .:/app
     labels:
         com.continuouspipe.visibility: public
-        com.continuouspipe.image-name: sroze/php-example-manual
+        com.continuouspipe.image-name: docker.io/sroze/php-example-manual
 mysql:
     image: mysql
     environment:
