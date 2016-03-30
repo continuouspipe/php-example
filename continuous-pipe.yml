@@ -1,0 +1,21 @@
+tasks:
+    images:
+        build:
+            services:
+                web:
+                    image: docker.io/sroze/php-example-manual
+                    naming_strategy: sha1
+
+    deployment:
+        deploy:
+            cluster: ${CLUSTER}
+            services:
+                mysql:
+                    deployment_strategy:
+                        locked: true
+
+                web:
+                    specification:
+                        accessibility:
+                            from_external: true
+
