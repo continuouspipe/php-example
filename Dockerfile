@@ -12,7 +12,7 @@ RUN requirements="zlib1g-dev libicu-dev git curl" \
 
 # Apache & PHP configuration
 RUN a2enmod rewrite
-ADD docker/apache/vhost.conf /etc/apache2/sites-enabled/default.conf
+ADD docker/apache/vhost.conf /etc/apache2/sites-enabled/000-default.conf
 ADD docker/php/php.ini /usr/local/etc/php/php.ini
 
 # Install composer
