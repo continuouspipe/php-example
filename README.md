@@ -10,4 +10,4 @@ In order to have useful feature such as the DNS resolution, you can start the ap
 dock-cli start
 ```
 
-*Note*: you can also start the application with `docker-compose`.
+**Note**: you can also start the application with `docker-compose`.
