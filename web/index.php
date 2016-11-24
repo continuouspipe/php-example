@@ -20,7 +20,7 @@ $app->register(new DoctrineServiceProvider(), array(
 ));
 
 $app->get('/', function () {
-    return new Response('<p>My PHP application running, with this under dev featuee!</p><p><a href="/status">Go to status page to check the database.</a></p>');
+    return new Response('<p>My PHP application running, and is deployed with CP!</p><p><a href="/status">Go to status page to check the database.</a></p>');
 });
 
 $app->mount('/status', new StatusController());
