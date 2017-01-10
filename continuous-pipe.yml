@@ -4,11 +4,12 @@ tasks:
             services:
                 web:
                     image: docker.io/sroze/php-example-manual
-                    naming_strategy: sha1
 
     deployment:
         deploy:
             cluster: ${CLUSTER}
+            environment:
+                name: '"phpexample-" ~ code_reference.branch'
             services:
                 mysql:
                     deployment_strategy:
@@ -18,4 +19,3 @@ tasks:
                     specification:
                         accessibility:
                             from_external: true
-
