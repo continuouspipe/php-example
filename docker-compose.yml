@@ -1,14 +1,16 @@
-web:
-    build: .
-    links:
-        - mysql
-    expose:
-        - 80
-    volumes:
-        - .:/app
-mysql:
-    image: mysql
-    environment:
-        MYSQL_ROOT_PASSWORD: root
-    expose:
-        - 3306
+version: '3'
+services:
+    web:
+        build: .
+        depends_on:
+            - mysql
+        expose:
+            - 80
+        volumes:
+            - .:/app
+    mysql:
+        image: mysql
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+        expose:
+            - 3306
